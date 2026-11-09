@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mijn tafel app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">tafel app/website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+         
+        </li>
+        <li class="nav-item">
+         
+        </li>
+        <li class="nav-item">
+        
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col"> <div class="card text-center">
+                <div class="card-header">
+                    Tafel app 1
+                </div>
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col">
+                            <label for="inputTafel" class="col-form-label">Welke tafel?</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="inputTafel" class="form-control">
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-warning" onclick="showTafel()">start</a>
+                        </div>
+                    </div>
+                    <p class="card-text" id="outputTafel">1 x 5 = 5<br>
+                        2 x 5 = 10<br>
+                        3 x 5 = 15<br>
+                        4 x 5 = 20<br>
+                        5 x 5 = 25<br>
+                        6 x 5 = 30<br>
+                        7 x 5 = 35<br>
+                        8 x 5 = 40<br>
+                        9 x 5 = 45<br>
+                        10 x 5 = 50
+                    </p>
+
+                </div>
+            </div></div>
+        
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    Tafel app 2
+                </div>
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col">
+                            <label for="inputchecktafel" class="col-form-label" id="som">.. X .. = ..</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="inputchecktafel" class="form-control">
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-success"
+        onclick="checktafel()">check</button>
+                        </div>
+                    </div>
+                    <p class="card-text" id="outputchecktafel">GOED! / FOUT </p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col"> <div class="card text-center">
+                <div class="card-header">
+                    Tafel app 3
+                </div>
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col">
+                            <label for="inputTafeltest" class="col-form-label">...</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="inputTafeltest" class="form-control">
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-danger" onclick="absoluut_niks()">...</a>
+                        </div>
+                    </div>
+                    <p class="card-text" id="outputTafeltest">
+                      doet niks 
+                    </p>
+
+                </div>
+            </div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="tafelapp.js"></script>
+</body>
+<footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="text-center">© 2026 Tafel app <br> -William Flos BSD-O-AUG26B</p>
+</footer>
+
+</html>
