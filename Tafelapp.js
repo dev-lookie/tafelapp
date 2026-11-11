@@ -3,43 +3,68 @@ let tafeloutputObj = document.getElementById("outputTafel");
 
 function showTafel() {
     let tafel = tafelinputObj.value
-    //let teller = 1;
+    
     let output = "";
     let uitkomst = 0;
     for (let teller = 1; teller < 11; teller++ ) {
         uitkomst = teller * tafel;
         output += teller + " x " + tafel + " = " + uitkomst + "<br>";
     }
-    // while (teller < 11) {
-    //     uitkomst = teller * tafel;
-    //     output += teller + " x " + tafel + " = " + uitkomst + "<br>";
-    //     teller++;
-    // }
+  
     tafeloutputObj.innerHTML = output;
 }
 
 
+
 // APP 2: Willekeurige som controleren
+
 let tafelinputcheckObj =
     document.getElementById("inputchecktafel");
 
 let tafeloutputcheckObj =
     document.getElementById("outputchecktafel");
 
-let somObj = document.getElementById("som");
+let somObj =
+    document.getElementById("som");
+
+let keuzetafelObj =
+    document.getElementById("keuzetafel");
+
+let oefeningObj =
+    document.getElementById("oefening");
 
 let uitkomst = 0;
+let gekozenTafel = 0;
 let controleBezig = false;
+
+
+// Start de oefening
+function startOefening() {
+
+    gekozenTafel = Number(keuzetafelObj.value);
+
+    if (gekozenTafel < 1 || gekozenTafel > 10 ||
+        keuzetafelObj.value === "") {
+
+        alert("Vul een tafel in tussen 1 en 10!");
+        return;
+    }
+
+    oefeningObj.style.display = "block";
+
+    nieuweSom();
+}
 
 
 // Maak een nieuwe willekeurige som
 function nieuweSom() {
-    let tafel = Math.floor(Math.random() * 10) + 1;
+
     let getal = Math.floor(Math.random() * 10) + 1;
 
-    uitkomst = tafel * getal;
+    uitkomst = gekozenTafel * getal;
 
-    somObj.textContent = tafel + " x " + getal + " = ?";
+    somObj.textContent =
+        gekozenTafel + " x " + getal + " = ?";
 
     tafelinputcheckObj.value = "";
     tafeloutputcheckObj.textContent = "";
@@ -50,7 +75,7 @@ function nieuweSom() {
 
 // Controleer het antwoord
 function checktafel() {
-    // Voorkom dat je meerdere keren tegelijk controleert
+
     if (controleBezig) {
         return;
     }
@@ -71,12 +96,12 @@ function checktafel() {
         tafeloutputcheckObj.textContent = "FOUT!";
     }
 
-    // Wacht 1 seconde en maak dan een nieuwe som
     setTimeout(function() {
         nieuweSom();
     }, 1000);
 }
 
-
-// Start app 2 met een willekeurige som
-nieuweSom();
+function absoluut_niks() {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    alert("had nou maar niet op de knop geklikt");
+}
